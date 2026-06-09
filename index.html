@@ -3,79 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Darmawan</title>
+    <title>Teknologi AI | Darmawan</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --secondary-color: #e67e22;
-            --bg-color: #f4f7f6;
-            --text-color: #333;
+            --bg-body: #f0f2f5;
+            --primary-dark: #1e293b;
+            --accent: #3b82f6;
+            --white: #ffffff;
+            --text: #334155;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--bg-body); color: var(--text); line-height: 1.6; }
 
-        .container {
-            width: 90%;
-            max-width: 600px;
-            background: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            text-align: center;
-        }
+        /* Header Modern */
+        header { background-color: var(--primary-dark); color: var(--white); padding: 3rem 1rem; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { opacity: 0.8; margin-top: 0.5rem; }
 
-        h1 { color: var(--primary-color); margin-bottom: 5px; }
-        .npm { color: #7f8c8d; font-weight: bold; margin-bottom: 20px; }
+        /* Navigasi */
+        nav { background: var(--white); padding: 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--primary-dark); font-weight: 600; }
 
-        .nav-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            color: white;
-            background-color: var(--accent-color);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
-        }
-
-        .btn-secondary { background-color: var(--secondary-color); }
-        .btn-secondary:hover { box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4); }
+        /* Main Content */
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: var(--white); padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid var(--accent); }
+        h2 { color: var(--primary-dark); margin-top: 0; }
+        
+        /* List */
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.5rem; }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>Teknologi AI dalam Kehidupan Sehari-hari</h1>
+    <p>Pemanfaatan Artificial Intelligence di Era Digital</p>
+</header>
+
+<nav>
+    <a href="#">Profil</a>
+    <a href="#">Tentang AI</a>
+    <a href="#">Manfaat</a>
+    <a href="#">Contoh</a>
+</nav>
+
 <div class="container">
-    <h1>Darmawan</h1>
-    <div class="npm">NPM: 2410010554 | Informatika</div>
-    
-    <div class="nav-buttons">
-        <a href="#" class="btn">Bio</a>
-        <a href="#" class="btn btn-secondary">Proyek</a>
-        <a href="#" class="btn">Kontak</a>
-    </div>
+    <section class="card">
+        <h2>Profil Pembuat</h2>
+        <p><strong>Nama:</strong> Darmawan</p>
+        <p><strong>NPM:</strong> 2410010554</p>
+        <p><strong>Program Studi:</strong> Informatika</p>
+    </section>
+
+    <section class="card">
+        <h2>Tentang AI</h2>
+        <p>Artificial Intelligence (AI) adalah teknologi yang memungkinkan komputer atau mesin melakukan tugas yang biasanya membutuhkan kecerdasan manusia seperti belajar, mengenali pola, dan mengambil keputusan.</p>
+    </section>
+
+    <section class="card">
+        <h2>Manfaat AI</h2>
+        <ul>
+            <li>Meningkatkan efisiensi pekerjaan secara signifikan.</li>
+            <li>Membantu analisis data yang kompleks dengan lebih cepat.</li>
+            <li>Mengurangi tingkat kesalahan manusia (human error).</li>
+            <li>Meningkatkan kualitas layanan digital yang personal.</li>
+        </ul>
+    </section>
 </div>
 
 </body>
