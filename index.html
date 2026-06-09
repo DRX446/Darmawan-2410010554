@@ -3,74 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teknologi AI | Darmawan</title>
+    <title>Darmawan | Dark Glass Portfolio</title>
     <style>
         :root {
-            --bg-body: #f0f2f5;
-            --primary-dark: #1e293b;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
             --accent: #3b82f6;
-            --white: #ffffff;
-            --text: #334155;
+            --text-main: #ffffff;
+            --text-dim: #a1a1aa;
         }
 
-        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--bg-body); color: var(--text); line-height: 1.6; }
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #09090b; /* Warna gelap deep */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+        }
 
-        /* Header Modern */
-        header { background-color: var(--primary-dark); color: var(--white); padding: 3rem 1rem; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { opacity: 0.8; margin-top: 0.5rem; }
+        .desktop-container {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
 
-        /* Navigasi */
-        nav { background: var(--white); padding: 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--primary-dark); font-weight: 600; }
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
 
-        /* Main Content */
-        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: var(--white); padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid var(--accent); }
-        h2 { color: var(--primary-dark); margin-top: 0; }
+        h2 { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
         
-        /* List */
-        ul { padding-left: 1.2rem; }
-        li { margin-bottom: 0.5rem; }
+        .data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .data-row { padding: 15px; border-radius: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); }
+
+        .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .project-card { background: rgba(188, 115, 232, 0.03); padding: 20px; border-radius: 20px; text-align: center; border: 1px solid var(--glass-border); }
+
+        .btn-interact {
+            width: 100%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        .btn-interact:hover { background: #2563eb; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Teknologi AI dalam Kehidupan Sehari-hari</h1>
-    <p>Pemanfaatan Artificial Intelligence di Era Digital</p>
-</header>
+<div class="desktop-container">
+    <!-- Kolom Kiri -->
+    <div class="left-panel">
+        <div class="glass-card" style="text-align: center;">
+            <h1 style="font-size: 1.8rem; margin: 0;">Darmawan</h1>
+            <p style="color: var(--accent);">NPM: 2410010554</p>
+            <p style="color: var(--text-dim);">Informatika | UNISKA MAB</p>
+            <button class="btn-interact" id="btnSapa">Sapa Saya</button>
+            <p id="msg" style="margin-top: 15px; font-weight: bold; color: var(--accent);"></p>
+        </div>
+    </div>
 
-<nav>
-    <a href="#">Profil</a>
-    <a href="#">Tentang AI</a>
-    <a href="#">Manfaat</a>
-    <a href="#">Contoh</a>
-</nav>
+    <!-- Kolom Kanan -->
+    <div class="right-panel">
+        <div class="glass-card">
+            <h2>Data Pribadi & Keahlian</h2>
+            <div class="data-grid">
+                <div class="data-row">🎓 Instansi: UNISKA MAB</div>
+                <div class="data-row">📍 Lokasi: Banjarmasin</div>
+                <div class="data-row">💻 Tech: PHP, MySQL, JS</div>
+                <div class="data-row">🌏 Bahasa: Indo, Mandarin</div>
+            </div>
+        </div>
 
-<div class="container">
-    <section class="card">
-        <h2>Profil Pembuat</h2>
-        <p><strong>Nama:</strong> Darmawan</p>
-        <p><strong>NPM:</strong> 2410010554</p>
-        <p><strong>Program Studi:</strong> Informatika</p>
-    </section>
-
-    <section class="card">
-        <h2>Tentang AI</h2>
-        <p>Artificial Intelligence (AI) adalah teknologi yang memungkinkan komputer atau mesin melakukan tugas yang biasanya membutuhkan kecerdasan manusia seperti belajar, mengenali pola, dan mengambil keputusan.</p>
-    </section>
-
-    <section class="card">
-        <h2>Manfaat AI</h2>
-        <ul>
-            <li>Meningkatkan efisiensi pekerjaan secara signifikan.</li>
-            <li>Membantu analisis data yang kompleks dengan lebih cepat.</li>
-            <li>Mengurangi tingkat kesalahan manusia (human error).</li>
-            <li>Meningkatkan kualitas layanan digital yang personal.</li>
-        </ul>
-    </section>
+        <div class="glass-card">
+            <h2>Portofolio Proyek</h2>
+            <div class="project-grid">
+                <div class="project-card"><strong>Aplikasi Salon</strong><br><small style="color:var(--text-dim)">Booking System</small></div>
+                <div class="project-card"><strong>Furniture Sales</strong><br><small style="color:var(--text-dim)">Web Rancang Bangun</small></div>
+                <div class="project-card"><strong>Darma Barbers</strong><br><small style="color:var(--text-dim)">Branding Design</small></div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    document.getElementById('btnSapa').addEventListener('click', function() {
+        document.getElementById('msg').innerText = "Halo! Terima kasih sudah berkunjung.";
+    });
+</script>
 
 </body>
 </html>
